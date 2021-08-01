@@ -1,0 +1,14 @@
+
+   r!sc's process patcher v1.5.1
+
+   A simple process patch engine
+  Uses a simple script to produce
+   a standalone loader / process 
+ patcher, which  includes a search
+function to decide when the process
+is unpacked/protected, then patches
+           said bytes.
+           
+      Output is a win32'exe
+
+          (c)2000 r!sc

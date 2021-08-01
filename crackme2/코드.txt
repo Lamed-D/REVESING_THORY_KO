@@ -1,0 +1,42 @@
+
+
+Private Sub Command1_Click()
+End
+End Sub
+
+Private Sub Command2_Click()
+   var_84 = "About"
+   var_74 = "abex' 2nd crackme" & Chr(13) & Chr(10) & "coded on 19th September 1999"
+   var_24 = MsgBox(var_74, 0, var_84, var_94, var_A4)
+   Exit Sub
+End Sub
+
+Private Sub Command3_Click()
+   var_74 = Form1.Text1.Text
+   If (Len(var_74) < 4) Then
+     var_AC = "Error!"
+     var_9C = "Please enter at least 4 chars as name!"
+     var_64 = MsgBox(var_9C, 0, var_AC, var_BC, var_CC)
+   End If
+   var_8008 = (Len(var_74) < 4)
+   If var_8008 = 0 Then
+     For var_24 = 1 To 4 Step 1
+         var_8010 = Asc(CStr(Mid(var_74, CLng(var_24), 1)))
+         var_D4 = var_8010
+         var_44 = var_44 & Hex(var_8010 + 100)
+       Next var_24
+     var_88 = Form1.Text2.Text
+     If (var_44 = var_88) Then
+       var_AC = "Congratulations!"
+       var_9C = "Yep, this key is right!"
+       var_64 = MsgBox(var_9C, 0, var_AC, var_BC, var_CC)
+     Else
+     If (var_44 <> var_88) Then
+       var_AC = "Wrong serial!"
+       var_9C = "Nope, this serial is wrong!"
+       var_84 = MsgBox(var_9C, 0, var_AC, var_BC, var_CC)
+     End If
+   End If
+   End If
+   Exit Sub
+End Sub

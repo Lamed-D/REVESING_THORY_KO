@@ -1,0 +1,57 @@
+v1.5.1
++killing of extra spaces b4 commandline '"rpp.exe"   script.rpp' would try to load '  script.rpp' and would have failed :(
++setcurrentdirectory to that of the script file, so loader is created in the same directory as the script file..
+
+r!sc 29th march 2000
+
+v1.5
++tampered with loader's a bit (heh, i hope they run on NT/2k)
++added a call to VirtualProtectEX before every WriteProcessMemory (blame EliCZ :)
++tampered with rpp a bit aswell
++reduced the amount of loader patch bytes to 180h (its enough, huh?)
++reduced maximum script size to 2000h
++added even more bugs & stuff
++released source?
++still havent stopped tampering with pe-headers . i will never learn
+
+r!sc friday 25th febuary 2000
+
+v1.4
++stuff undone to loader pe header. to make it run on nT?
++version number incremented
++i make another promise not to tamper with pe-headers (will it last?)
+
+r!SC erm, probably tuesday, 9th november, 1999
+
+v1.3
+
++Loaders have an icon and version info! (and are 3kb smaller than before)
++Loaders pass commandline onto the process its creating
++ADDED NEW SCRIPT COMMAND!! 'R:'..  process is created suspended, then any patch data before the 'R:' is executed, is patched whilst the process hasnt run, then, after the 'R:', this resumes the process, to let it unpack/unprotect itself, and the process is patched normally. see azpr243.rpp for an example
++few other internal changes. plenty more bugs added!
+
+r!SC wednesday 20th october 1999
+
+v1.2i beta 1 :)
+
++fixed loaders to work under windows NT (heh, i wont tamper with pe headers anymore)
++added pretty icon & version info
++small FiX in commandline interpreter
++readprocessmemory FiX
++see 'mygod!.txt' for full details
+
+R!SC thursday 15th july 1999
+
+v1.2i
+
++script process name must be less than 30 chars.
++maxed out patches allowed in loader, now maximum 127.
++maxed out patch data array in loader, now maximum of 1886 bytes to patch.
++increased default timer loop, now defaults to 'T=4000:'.
++re-added commandline use.
++script must be less than 40kb now, instead of a measily 2kb.
++added some counting functions, to check you are below the maximum amount of data allowed. 
++fixed a problem if u didnt terminate the script with a '$'.
++fixed a couple of typo's in readme.txt
+
+R!SC - thursday 6th may 1999
